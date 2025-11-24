@@ -74,18 +74,16 @@ Understanding this is essential for debugging and security monitoring.
 
 ### 5. DNS Tools Learned
 
-- `nslookup` – Basic DNS queries  
-- `dig` – Advanced DNS lookups  
-- `host` – Simple resolver tool  
-- Online DNS lookup services  
+Useful DNS investigation tools:
 
-Examples:
-
+```bash
 nslookup google.com
 dig A google.com
 dig MX example.com
 host tryhackme.com
+```
 
+These tools help SOC Analysts and pentesters investigate domain behavior, DNS anomalies, and suspicious resolutions.
 
 ---
 
