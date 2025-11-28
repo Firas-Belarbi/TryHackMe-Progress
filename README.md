@@ -1,4 +1,4 @@
-<img src="ChatGPT Image 28 nov. 2025, 21_26_52.png" width="850"/>
+<img src="ChatGPT Image 28 nov. 2025, 21_39_00.png" width="850"/>
 
 # TryHackMe Progress  
 Tracking my cybersecurity journey through hands-on labs and real-world challenges.
