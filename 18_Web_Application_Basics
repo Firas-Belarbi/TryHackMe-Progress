@@ -1,119 +1,113 @@
-# TryHackMe Progress - Web Application Basics
+# Web Application Basics – TryHackMe
 
-## Introduction  
-Welcome to **Web Application Basics**! This learning module covers the fundamental elements of web applications, such as URLs, HTTP requests, and responses. It is ideal for beginners starting out or those looking to build or work with web apps.
+## 🧩 Room Overview  
+This room covers the core concepts of web applications, focusing on URLs, HTTP requests, and responses.  
+Ideal for beginners or those wanting to understand how web apps function behind the scenes.
 
----
-
-## Learning Objectives  
-By completing this room, you will:  
-- Understand what a web application is and how it operates in a browser.  
-- Break down the components of a URL and their roles.  
-- Learn how HTTP requests and responses work.  
-- Get familiar with HTTP request methods and response codes.  
-- Understand HTTP headers and their importance for security.
+- Platform: **TryHackMe**  
+- Path: **Introduction / Web Applications**  
+- Status: ✅ Completed  
+- Focus: Understanding web app components, communication, and security basics
 
 ---
 
-## Web Application Overview  
-Think of a web application like a planet:
+## 🎯 Learning Objectives  
 
-- **Front End** is the surface visible to users (HTML, CSS, JavaScript).  
-- **Back End** is everything under the surface: servers, databases, networking.  
-- **WAF (Web Application Firewall)** acts like the planet’s atmosphere protecting from harmful attacks.
-
-### Front End Technologies  
-- **HTML:** Structure of web pages (like DNA of simple organisms).  
-- **CSS:** Visual design and styling.  
-- **JavaScript:** Adds interactivity, decision-making capabilities.
-
-### Back End Components  
-- **Database:** Stores user preferences and data.  
-- **Servers & Networking:** The infrastructure supporting the app.  
-- **WAF:** Protects web servers by filtering malicious requests.
+- Understand what a web application is and how browsers interact with it  
+- Break down the components of a URL  
+- Learn the structure and flow of HTTP requests and responses  
+- Familiarize with HTTP methods and status codes  
+- Discover important HTTP security headers
 
 ---
 
-## Uniform Resource Locator (URL)  
-URLs are addresses to access online content.
+## 🔑 Key Concepts Learned  
 
-### URL Parts:  
-- **Scheme:** Protocol used (HTTP/HTTPS).  
-- **User:** Optional user credentials.  
-- **Host/Domain:** Website identifier.  
-- **Port:** Communication gateway (usually 80 or 443).  
-- **Path:** Location of specific resource.  
-- **Query String:** Additional data (search terms, form inputs).  
-- **Fragment:** Points to specific webpage section.
+### 1. What is a Web Application?  
+A web app is software accessible via a web browser, consisting of:
 
-### Security Notes:  
-- Use HTTPS to encrypt connections.  
-- Beware of typosquatting: fake domains mimicking real ones.  
-- Sanitize query strings and fragments to avoid injections.
+- **Front End:** What users see (HTML, CSS, JavaScript)  
+- **Back End:** Servers, databases, APIs managing data and logic  
+- **Web Application Firewall (WAF):** Protects apps from malicious traffic
 
 ---
 
-## HTTP Messages  
-Communication between clients and servers involves two types:
+### 2. URL Anatomy  
+URLs are the addresses used to locate resources online.
 
-- **HTTP Requests:** Sent by users to interact with the app.  
-- **HTTP Responses:** Sent by servers with results.
-
-### Request Structure:  
-- **Start Line:** Method, URL path, HTTP version.  
-- **Headers:** Metadata (Host, User-Agent, Content-Type, etc.).  
-- **Body:** Data payload for POST/PUT requests.
-
-### Common HTTP Methods and Security Tips:  
-- **GET:** Retrieve data (avoid sensitive info in URL).  
-- **POST:** Send data (validate inputs).  
-- **PUT/DELETE:** Modify/delete data (authorize users).  
-- **PATCH, HEAD, OPTIONS, TRACE, CONNECT:** Specialized uses; disable TRACE if unused.
+Components include:  
+- **Scheme:** Protocol (http or https)  
+- **User info:** Optional username/password  
+- **Host:** Domain name or IP address  
+- **Port:** Communication endpoint (default 80 or 443)  
+- **Path:** Specific resource location  
+- **Query String:** Additional parameters  
+- **Fragment:** Page section anchor  
 
 ---
 
-## HTTP Response  
-Servers respond with:
+### 3. HTTP Messages  
 
-- **Status Line:** HTTP version, status code, reason phrase.  
-- **Headers:** Metadata (Content-Type, Server, Set-Cookie, etc.).  
-- **Body:** Actual content (HTML, JSON, images).
+#### HTTP Requests  
+Sent by client to server, consist of:  
+- Start line (method, path, version)  
+- Headers (Host, User-Agent, Content-Type...)  
+- Optional body (for POST, PUT)
 
-### Common Status Codes:  
-- **200 OK** - Success.  
-- **301 Moved Permanently** - Redirect.  
-- **404 Not Found** - Resource missing.  
-- **500 Internal Server Error** - Server failure.
+Common methods:  
+- **GET:** Retrieve data  
+- **POST:** Send data  
+- **PUT/DELETE:** Modify/delete resources  
 
----
-
-## Security Headers  
-Improve app security with HTTP headers:
-
-- **Content-Security-Policy (CSP):** Restricts content sources.  
-- **Strict-Transport-Security (HSTS):** Forces HTTPS.  
-- **X-Content-Type-Options:** Prevents MIME sniffing.  
-- **Referrer-Policy:** Controls referrer info sent.
+#### HTTP Responses  
+Sent by server, consist of:  
+- Status line (version, status code, reason)  
+- Headers (Content-Type, Set-Cookie...)  
+- Body (HTML, JSON, images...)
 
 ---
 
-## Practical Tasks  
-Using TryHackMe's static site emulator:
+### 4. HTTP Status Codes  
 
-- **GET** `/api/users` → Flag: `THM{YOU_HAVE_JUST_FOUND_THE_USER_LIST}`  
-- **POST** `/api/user/2` to update Bob's country → Flag: `THM{YOU_HAVE_MODIFIED_THE_USER_DATA}`  
-- **DELETE** `/api/user/1` → Flag: `THM{YOU_HAVE_JUST_DELETED_A_USER}`
+Categories:  
+- **1xx:** Informational  
+- **2xx:** Success (e.g., 200 OK)  
+- **3xx:** Redirection (e.g., 301 Moved Permanently)  
+- **4xx:** Client Errors (e.g., 404 Not Found)  
+- **5xx:** Server Errors (e.g., 500 Internal Server Error)  
 
 ---
 
-## Conclusion  
-You've learned about:  
+### 5. Security Headers  
 
-- Web application components.  
-- URL anatomy.  
-- HTTP requests/responses.  
-- Security headers.
+Important headers to protect web apps:  
+- **Content-Security-Policy (CSP):** Restricts content sources  
+- **Strict-Transport-Security (HSTS):** Forces HTTPS connections  
+- **X-Content-Type-Options:** Stops MIME sniffing  
+- **Referrer-Policy:** Controls information shared on navigation
 
-Get ready to explore more advanced web application security topics!
+---
+
+## 🛠 Practical Tasks  
+
+- Make a **GET** request to `/api/users`  
+  - Flag: `THM{YOU_HAVE_JUST_FOUND_THE_USER_LIST}`  
+
+- Make a **POST** request to `/api/user/2` to update Bob's country  
+  - Flag: `THM{YOU_HAVE_MODIFIED_THE_USER_DATA}`  
+
+- Make a **DELETE** request to `/api/user/1`  
+  - Flag: `THM{YOU_HAVE_JUST_DELETED_A_USER}`  
+
+---
+
+## 📚 Conclusion  
+You've gained a solid foundation on:  
+
+- Web app structure and components  
+- URL anatomy and HTTP communication  
+- HTTP methods, status codes, and security headers  
+
+Prepare to dive deeper into web application security next!
 
 ---
