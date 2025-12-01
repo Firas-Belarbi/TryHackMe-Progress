@@ -1,117 +1,117 @@
 # TryHackMe Progress - Web Application Basics
 
-## Introduction
+## Introduction  
 Welcome to **Web Application Basics**! This learning module covers the fundamental elements of web applications, such as URLs, HTTP requests, and responses. It is ideal for beginners starting out or those looking to build or work with web apps.
 
 ---
 
-## Learning Objectives
-By completing this room, you will:
-- Understand what a web application is and how it operates in a browser.
-- Break down the components of a URL and their roles.
-- Learn how HTTP requests and responses work.
-- Get familiar with HTTP request methods and response codes.
+## Learning Objectives  
+By completing this room, you will:  
+- Understand what a web application is and how it operates in a browser.  
+- Break down the components of a URL and their roles.  
+- Learn how HTTP requests and responses work.  
+- Get familiar with HTTP request methods and response codes.  
 - Understand HTTP headers and their importance for security.
 
 ---
 
-## Web Application Overview
+## Web Application Overview  
 Think of a web application like a planet:
 
-- **Front End** is the surface visible to users (HTML, CSS, JavaScript).
-- **Back End** is everything under the surface: servers, databases, networking.
+- **Front End** is the surface visible to users (HTML, CSS, JavaScript).  
+- **Back End** is everything under the surface: servers, databases, networking.  
 - **WAF (Web Application Firewall)** acts like the planet’s atmosphere protecting from harmful attacks.
 
-### Front End Technologies
-- **HTML:** Structure of web pages (like DNA of simple organisms).
-- **CSS:** Visual design and styling.
+### Front End Technologies  
+- **HTML:** Structure of web pages (like DNA of simple organisms).  
+- **CSS:** Visual design and styling.  
 - **JavaScript:** Adds interactivity, decision-making capabilities.
 
-### Back End Components
-- **Database:** Stores user preferences and data.
-- **Servers & Networking:** The infrastructure supporting the app.
+### Back End Components  
+- **Database:** Stores user preferences and data.  
+- **Servers & Networking:** The infrastructure supporting the app.  
 - **WAF:** Protects web servers by filtering malicious requests.
 
 ---
 
-## Uniform Resource Locator (URL)
+## Uniform Resource Locator (URL)  
 URLs are addresses to access online content.
 
-### URL Parts:
-- **Scheme:** Protocol used (HTTP/HTTPS).
-- **User:** Optional user credentials.
-- **Host/Domain:** Website identifier.
-- **Port:** Communication gateway (usually 80 or 443).
-- **Path:** Location of specific resource.
-- **Query String:** Additional data (search terms, form inputs).
+### URL Parts:  
+- **Scheme:** Protocol used (HTTP/HTTPS).  
+- **User:** Optional user credentials.  
+- **Host/Domain:** Website identifier.  
+- **Port:** Communication gateway (usually 80 or 443).  
+- **Path:** Location of specific resource.  
+- **Query String:** Additional data (search terms, form inputs).  
 - **Fragment:** Points to specific webpage section.
 
-### Security Notes:
-- Use HTTPS to encrypt connections.
-- Beware of typosquatting: fake domains mimicking real ones.
+### Security Notes:  
+- Use HTTPS to encrypt connections.  
+- Beware of typosquatting: fake domains mimicking real ones.  
 - Sanitize query strings and fragments to avoid injections.
 
 ---
 
-## HTTP Messages
+## HTTP Messages  
 Communication between clients and servers involves two types:
 
-- **HTTP Requests:** Sent by users to interact with the app.
+- **HTTP Requests:** Sent by users to interact with the app.  
 - **HTTP Responses:** Sent by servers with results.
 
-### Request Structure:
-- **Start Line:** Method, URL path, HTTP version.
-- **Headers:** Metadata (Host, User-Agent, Content-Type, etc.).
+### Request Structure:  
+- **Start Line:** Method, URL path, HTTP version.  
+- **Headers:** Metadata (Host, User-Agent, Content-Type, etc.).  
 - **Body:** Data payload for POST/PUT requests.
 
-### Common HTTP Methods and Security Tips:
-- **GET:** Retrieve data (avoid sensitive info in URL).
-- **POST:** Send data (validate inputs).
-- **PUT/DELETE:** Modify/delete data (authorize users).
+### Common HTTP Methods and Security Tips:  
+- **GET:** Retrieve data (avoid sensitive info in URL).  
+- **POST:** Send data (validate inputs).  
+- **PUT/DELETE:** Modify/delete data (authorize users).  
 - **PATCH, HEAD, OPTIONS, TRACE, CONNECT:** Specialized uses; disable TRACE if unused.
 
 ---
 
-## HTTP Response
+## HTTP Response  
 Servers respond with:
 
-- **Status Line:** HTTP version, status code, reason phrase.
-- **Headers:** Metadata (Content-Type, Server, Set-Cookie, etc.).
+- **Status Line:** HTTP version, status code, reason phrase.  
+- **Headers:** Metadata (Content-Type, Server, Set-Cookie, etc.).  
 - **Body:** Actual content (HTML, JSON, images).
 
-### Common Status Codes:
-- 200 OK - Success.
-- 301 Moved Permanently - Redirect.
-- 404 Not Found - Resource missing.
-- 500 Internal Server Error - Server failure.
+### Common Status Codes:  
+- **200 OK** - Success.  
+- **301 Moved Permanently** - Redirect.  
+- **404 Not Found** - Resource missing.  
+- **500 Internal Server Error** - Server failure.
 
 ---
 
-## Security Headers
+## Security Headers  
 Improve app security with HTTP headers:
 
-- **Content-Security-Policy (CSP):** Restricts content sources.
-- **Strict-Transport-Security (HSTS):** Forces HTTPS.
-- **X-Content-Type-Options:** Prevents MIME sniffing.
+- **Content-Security-Policy (CSP):** Restricts content sources.  
+- **Strict-Transport-Security (HSTS):** Forces HTTPS.  
+- **X-Content-Type-Options:** Prevents MIME sniffing.  
 - **Referrer-Policy:** Controls referrer info sent.
 
 ---
 
-## Practical Tasks
+## Practical Tasks  
 Using TryHackMe's static site emulator:
 
-- GET `/api/users` → Flag: `THM{YOU_HAVE_JUST_FOUND_THE_USER_LIST}`
-- POST `/api/user/2` to update Bob's country → Flag: `THM{YOU_HAVE_MODIFIED_THE_USER_DATA}`
-- DELETE `/api/user/1` → Flag: `THM{YOU_HAVE_JUST_DELETED_A_USER}`
+- **GET** `/api/users` → Flag: `THM{YOU_HAVE_JUST_FOUND_THE_USER_LIST}`  
+- **POST** `/api/user/2` to update Bob's country → Flag: `THM{YOU_HAVE_MODIFIED_THE_USER_DATA}`  
+- **DELETE** `/api/user/1` → Flag: `THM{YOU_HAVE_JUST_DELETED_A_USER}`
 
 ---
 
-## Conclusion
-You've learned about:
+## Conclusion  
+You've learned about:  
 
-- Web application components.
-- URL anatomy.
-- HTTP requests/responses.
+- Web application components.  
+- URL anatomy.  
+- HTTP requests/responses.  
 - Security headers.
 
 Get ready to explore more advanced web application security topics!
