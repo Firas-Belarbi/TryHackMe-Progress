@@ -85,8 +85,3 @@ Hydra is an extremely effective tool for password cracking when used correctly. 
 
 ---
 
-## Resources
-
-- [THC-Hydra Official GitHub Repository](https://github.com/vanhauser-thc/thc-hydra)  
-- **rockyou.txt** password list included in Kali Linux  
-- Browser **Developer Tools** for inspecting HTTP requests  
