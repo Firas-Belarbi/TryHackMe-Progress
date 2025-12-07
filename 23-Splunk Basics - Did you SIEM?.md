@@ -1,6 +1,6 @@
 # Advent of Cyber 2025 – Day 3
 # Splunk Practical Investigation Writeup
-# Hands-On SIEM Analysis (No Theory, Only Practical Steps)
+# Hands-On SIEM Analysis ( Practical Steps)
 
 This writeup documents every practical step I performed inside Splunk to solve the TryHackMe Advent of Cyber Day 3 challenge. 
 The focus of this file is demonstrating real SIEM investigation skills: 
