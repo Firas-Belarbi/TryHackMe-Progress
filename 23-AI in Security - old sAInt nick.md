@@ -1,7 +1,7 @@
 
 # TryHackMe — The Boom of AI Assistants  
 ## Advent of Cyber – Day 4  
-### Completed by: (Your Name Here)
+
 
 ---
 
